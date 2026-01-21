@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - AI Nutrition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #22C55E;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #14532d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #22C55E;
+        }
+        .neon-border {
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.2), inset 0 0 5px rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
+        }
+        
+        @keyframes scan {
+          0% { top: 0%; opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { top: 100%; opacity: 0; }
+        }
+        .scan-line {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: linear-gradient(to bottom, transparent, #22C55E, transparent);
+          box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+          z-index: 20;
+          animation: scan 2s ease-in-out infinite;
+          pointer-events: none;
+        }
+        .image-pulse {
+          animation: pulse-border 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-border {
+          0%, 100% { border-color: rgba(34, 197, 94, 0.3); }
+          50% { border-color: rgba(34, 197, 94, 0.8); box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-black text-green-500 antialiased min-h-screen">
+    <div id="root"></div>
+</body>
+</html>

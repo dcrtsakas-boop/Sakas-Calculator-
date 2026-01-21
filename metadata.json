@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Calculator - AI Nutrition",
+  "description": "Un puissant calculateur de nutrition propulsé par l'IA au thème noir et vert, analysant les aliments par photo et calculant les besoins en macronutriments.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
